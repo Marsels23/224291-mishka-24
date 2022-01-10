@@ -1,7 +1,7 @@
 .about {
   padding-left: 30px;
   padding-right: 30px;
-  margin-bottom: 62px;
+  margin: 0;
 }
 
 .about__title {
@@ -25,7 +25,11 @@
 }
 
 .about__item {
-  margin-bottom: 30px;
+  margin-bottom: 83px;
+
+  &:last-child {
+    margin-bottom: 58px;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -33,10 +37,10 @@
     margin-bottom: 83px;
   }
 
-  .about__inner{
-  width: 700px;
-  padding-left: auto;
-  padding-left: auto;
+  .about__inner {
+    width: 700px;
+    padding-left: auto;
+    padding-left: auto;
   }
 
   .about__title {
@@ -66,4 +70,3 @@
     grid-row-start: 3;
   }
 }
-
