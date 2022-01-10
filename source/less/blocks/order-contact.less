@@ -23,3 +23,39 @@
   line-height: 18px;
   box-sizing: border-box;
 }
+
+.order-contact__title {
+  margin-bottom: 9px;
+  white-space: nowrap;
+}
+
+@media (min-width: @tablet-width) {
+  .order-contact {
+    background-color: #f1f1f1;
+    margin-left: calc((100vw - 668px) / -2);
+    margin-right: calc((100vw - 668px) / -2);
+    padding: 0;
+  }
+
+  .order-contact__inner {
+    padding-top: 50px;
+    margin-bottom: 30px;
+  }
+
+  .order-contact__item {
+    display: flex;
+
+  }
+
+  .order-contact__title {
+    margin: 0;
+    align-items: center;
+    min-width: 80px;
+    margin-right: 124px;
+  }
+
+  .order-contact__input {
+    width: 500px;
+    background-color: #f1f1f1;
+  }
+}

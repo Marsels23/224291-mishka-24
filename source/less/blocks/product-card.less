@@ -1,15 +1,26 @@
 .product-card {
   border: 1px solid #ECECEC;
+  margin-bottom: 30px;
 }
 
+.product-card__title {
+  margin: 0;
+}
+
+.product-card__picture {
+  margin-bottom: 27px;
+  width: 100%;
+}
 
 .product-card__link {
+  display: block;
   font-weight: bold;
   font-size: 17px;
   line-height: 24px;
   color: inherit;
   text-decoration: none;
   text-align: left;
+  padding-left: 28px;
 }
 
 .product-card__parameter {
@@ -19,12 +30,67 @@
   padding-left: 28px;
   margin: 0;
   text-align: left;
+  margin-bottom: 41px;
 }
 
 .product-card__price {
+  display: block;
+  padding-left: 28px;
   text-align: left;
   font-weight: bold;
   font-size: 15px;
   line-height: 24px;
+  margin-bottom: 26px;
 }
 
+@media (min-width: @tablet-width) {
+  .product-card {
+    display: flex;
+    margin-bottom: 54px;
+  }
+
+  .product-card__text {
+    flex-shrink: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product-card__picture {
+    width: 338px;
+    height: 100%;
+    margin: 0;
+    flex-shrink: 0;
+  }
+
+  .product-card__parameter {
+    margin-bottom: auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .product-card {
+    flex-direction: column;
+    width: 315px;
+  }
+
+  .product-card__picture {
+    width: 315px;
+    height: 462px;
+    margin-bottom: 27px;
+  }
+
+  .product-card__link {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .product-card__title {
+    margin-bottom: 7px;
+  }
+
+  .product-card__parameter {
+    font-size: 15px;
+    line-height: 30px;
+    margin-bottom: 65px;
+  }
+}

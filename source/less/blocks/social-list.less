@@ -1,0 +1,27 @@
+.social-list {
+  padding-top: 25px;
+  padding-bottom: 20px;
+  padding-right: 0;
+  padding-left: 0;
+  border-bottom: 1px solid #e5e5e5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-list__item {
+  display: flex;
+
+
+  &:not(:last-child) {
+    margin-right: 39px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .social-list {
+    padding: 0;
+    border-bottom: none;
+    margin: 0;
+  }
+}

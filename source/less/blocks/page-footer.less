@@ -2,6 +2,15 @@
   background: @light-gray;
 }
 
+.page-footer__logo-link {
+  display: none;
+}
+
+.page-footer__copyright {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
 
 .page-footer__text {
   padding-top: 7px;
@@ -10,4 +19,30 @@
   font-weight: bold;
   font-size: 19px;
   line-height: 18px;
+  margin-right: 27px;
+}
+
+.page-footer_svg {
+  width: 30px;
+  height: 37px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    padding-top: 51px;
+    padding-bottom: 58px;
+  }
+
+  .page-footer__inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .page-footer__copyright {
+    justify-content: flex-end;
+  }
+
+  .page-footer__logo-link {
+    display: block;
+  }
 }
