@@ -36,28 +36,32 @@
   .site-navigation {
     display: flex;
     grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column-end: -1;
     grid-row-start: 2;
     grid-row-end: 3;
     margin: 0;
     padding: 0;
   }
 
-  .site-navigation__delivery {
+  .site-navigation--lower {
+    grid-column-start: 3;
     display: flex;
     justify-content: flex-end;
-    margin: 0;
-    font-size: 15px;
-    grid-column-start: 3;
-    grid-column-end: 5;
-    grid-row-start: 2;
-    grid-row-end: 3;
   }
 
   .site-navigation__item {
     font-size: 15px;
   }
 
+  .site-navigation__item--delivery {
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+
+  .site-navigation__link--order {
+    margin-right: 70px;
+  }
   .site-navigation__link--catalog {
     margin-right: 35px;
   }

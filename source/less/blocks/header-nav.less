@@ -43,17 +43,19 @@
 }
 
 @media (min-width: @desktop-width) {
-  .header-nav__inner {
-    display: grid;
-    grid-template-columns: 455px 140px 455px;
-    grid-template-rows: min-content min-content;
+  .header-nav {
+    display: flex;
   }
 
   .header-nav__logo-wrapper {
-    width: 150px;
-    top: 22px;
+    position: absolute;
+    top: 50%;
     left: 50%;
-    margin-left: -75px;
-    text-align: center;
+  }
+
+  .header-nav__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 }
