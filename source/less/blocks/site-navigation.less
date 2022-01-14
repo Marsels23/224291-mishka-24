@@ -28,7 +28,7 @@
   display: none;
 }
 
-.site-navigation__item--lower {
+.site-navigation--lower {
   display: none;
 }
 
@@ -43,14 +43,23 @@
     padding: 0;
   }
 
-  .site-navigation--lower {
-    grid-column-start: 3;
-    display: flex;
-    justify-content: flex-end;
+
+  .site-navigation__item--receipts,
+  .site-navigation__item--sale {
+    display: none;
+
   }
 
   .site-navigation__item {
     font-size: 15px;
+    margin-right: 70px;
+  }
+
+  .site-navigation--lower {
+    grid-column-start: 3;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
   }
 
   .site-navigation__item--delivery {
@@ -69,53 +78,56 @@
 
 @media (min-width: @desktop-width) {
   .site-navigation {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 2;
     display: flex;
+    justify-content: space-between;
     margin: 0;
     align-items: center;
+    /* outline: 3px solid #0000ffcc;
+    outline-offset: -5px; */
 
-  }
-
-  .site-navigation__delivery {
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    padding-left: 118px;
-    padding-top: 20px;
   }
 
   .site-navigation__item {
-    font-size: 17px;
+    font-size: 15px;
   }
 
   .site-navigation__link--catalog {
     margin: 0;
-    margin-right: 70px;
   }
 
   .site-navigation__link--order {
     margin: 0;
   }
 
-  .site-navigation--lower {
-    display: flex;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    padding-top: 20px;
-  }
-
-  .site-navigation__item--lower {
+  .site-navigation__item--sale{
     display: block;
     font-size: 15px;
+    grid-column-start: 2;
+    justify-self: center;
+   margin: 0;
+  }
+
+  .site-navigation--lower {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  /*   outline: 3px solid rgba(255, 0, 0, 0.8);
+    outline-offset: -5px; */
+  }
+
+  .site-navigation__item--delivery {
+    grid-column-start: 5;
+    grid-column-end: -1;
+    justify-self: end;
+    margin: 0;
+  }
+
+  .site-navigation__item--receipts {
+    display: block;
+    margin: 0;
   }
 
   .site-navigation__item--lower:first-child {
-    margin-right: 61px;
+    // margin-right: 61px;
   }
 }
