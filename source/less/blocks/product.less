@@ -50,7 +50,6 @@
 @media (min-width: @tablet-width) {
   .product {
     width: auto;
-
   }
 
   .product__list {
@@ -63,23 +62,22 @@
 
   .product-link {
     width: 50%;
-    padding-right: 167px;
-    padding-left: 36px;
     font-size: 20px;
     line-height: 30px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .product {
-    width: 1050px;
-    min-height: 116px;
+
+
+  .product__list {
+margin: 0 auto;
+max-width: 1150px;
+justify-content: center;
   }
 
-  .product-link {
-    padding-right: 374px;
-    padding-left: 38px;
-    font-size: 20px;
-    line-height: 30px;
-  }
+.product__item {
+  flex-grow: 1;
+  min-height: 115px;
+}
 }
