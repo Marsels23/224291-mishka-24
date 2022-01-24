@@ -5,3 +5,55 @@
   margin-top: 22px;
   margin-bottom: 22px;
 }
+
+.header-nav__button {
+  padding: 0;
+  width: 20px;
+  height: 15px;
+  background-image: url("../img/icon-menu-open.svg");
+  background-color: white;
+  background-repeat: no-repeat;
+  border: none;
+  position: absolute;
+  top: 35%;
+  right: 9%;
+}
+
+@media (min-width: @tablet-width) {
+  .header-nav__button {
+    display: none;
+    background-image: none;
+  }
+
+  .header-nav {
+    position: relative;
+  }
+
+  .header-nav__inner {
+    display: grid;
+    grid-template-columns: 167px 167px 167px 167px;
+    grid-template-rows: min-content min-content;
+  }
+
+  .header-nav__logo-wrapper {
+    position: absolute;
+    margin: 0;
+    top: 22px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+
+  .header-nav__logo-wrapper {
+    position: absolute;
+    left: 50%;
+  }
+
+  .header-nav__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+   /*  outline: 3px solid rgba(0, 100, 0, 0.8);
+    outline-offset: -5px; */
+  }
+}

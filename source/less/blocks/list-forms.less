@@ -3,5 +3,28 @@
   line-height: 24px;
   color: #444444;
   align-items: left;
+  padding-left: 30px;
+  padding-right: 30px;
   margin: 0;
+  margin-bottom: 30px;
+}
+
+@media (min-width: @tablet-width) {
+  .list-forms__textual {
+    font-size: 17px;
+    line-height: 30px;
+    margin-bottom: 80px;
+    width: 668px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .list-forms__textual {
+    width: 1050px;
+    box-sizing: border-box;
+  }
 }
