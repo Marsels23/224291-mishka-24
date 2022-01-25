@@ -101,6 +101,9 @@ width: 100%;
     grid-column-end: 4;
     margin-bottom: 56px;
     background-color: #E3E2DC;
+    min-height: 457px;
+    max-height: 457px;
+    overflow: hidden;
   }
 
   .contacts__btn {
@@ -124,12 +127,11 @@ width: 100%;
 @media (min-width: @desktop-width) {
   .contacts__inner {
     max-width: 1150px;
-    margin: 0;
-    margin-left: auto;
-    margin-right: 30px;
-    grid-template-columns: 60px 294px 527px;
+    margin: 0 auto;
+    grid-template-columns: 174px 350px auto;
     grid-template-rows: 144px 171px 142px;
     column-gap: 55px;
+    box-sizing: border-box;
   }
 
   .contacts__title {
