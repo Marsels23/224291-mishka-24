@@ -11,6 +11,10 @@
   padding-left: 30px;
 }
 
+.contacts__svg {
+  display: none;
+}
+
 .contacts__text {
   display: flex;
   flex-direction: column;
@@ -25,14 +29,17 @@
   justify-content: flex-start;
 }
 
-.contacts__map img{
+.contacts__map iframe{
 display: block;
 width: 100%;
+border: none;
 }
 
 .contacts__map {
 margin-bottom: 40px;
 width: 100%;
+min-height: 454px;
+max-height: 454px;
 }
 
 .contacts__address {
@@ -47,6 +54,11 @@ width: 100%;
 .contacts__link {
   color: #444444;
   text-decoration-color: #62D1BA;
+}
+
+.contacts__wrapper-btn {
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .contacts__btn {
@@ -72,7 +84,13 @@ width: 100%;
   .contacts__inner {
     display: grid;
     grid-template-columns: 334px 334px;
+  }
 
+  .contacts__svg {
+display: block;
+grid-column-start:-1;
+align-self: center;
+justify-self: center;
   }
 
   .contacts__title {
@@ -106,12 +124,21 @@ width: 100%;
     overflow: hidden;
   }
 
+  .contacts__wrapper-btn {
+    grid-column-start: 2;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .contacts__btn {
     grid-column-start: 1;
     grid-column-end: 4;
     width: 228px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
+
   }
 
   .contacts__signature {
@@ -143,9 +170,13 @@ width: 100%;
     line-height: 57px;
     padding: 0;
     margin: 0;
-
   }
 
+  .contacts__svg {
+    grid-column-start: 1;
+    justify-self: end;
+    align-self: start;
+  }
   .contacts__text {
     flex-direction: column;
     font-size: 17px;
