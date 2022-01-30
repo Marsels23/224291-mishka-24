@@ -1,5 +1,6 @@
 .user-navigation {
-  display: none;
+  margin: 0;
+  padding: 0;
 }
 
 .user-navigation__item {
@@ -8,6 +9,10 @@
   font-weight: bold;
   font-size: 17px;
   line-height: 24px;
+  padding-top: 26px;
+  padding-bottom: 29px;
+  padding-left: 32px;
+  box-shadow: 0 -1px 0 0 #e5e5e5;
 }
 
 .user-navigation__link {
@@ -15,19 +20,20 @@
   color: black;
 }
 
+.user-navigation__svg,
+.user-navigation__basket-svg {
+  padding-right: 25px;
+}
+
 @media (min-width: @tablet-width) {
   .user-navigation {
     display: flex;
+    flex-basis: 100%;
+    flex-direction: row;
     justify-content: flex-end;
-    flex-wrap: wrap;
-    padding: 0;
     margin: 0;
-    padding-bottom: 30px;
-    grid-column-start: 2;
-    grid-column-end: 5;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    align-items: center;
+    padding: 0;
+    order: -1;
   }
 
   .user-navigation__list {
@@ -35,48 +41,50 @@
     margin: 0;
   }
 
+  .user-navigation__text {
+    display: none;
+  }
+
+  .user-navigation__svg,
+  .user-navigation__basket-svg {
+    padding: 0;
+  }
+
+  .user-navigation__item--basket {
+    padding-top: 31px;
+    padding-right: 0;
+    padding-bottom: 34px;
+    padding-left: 50px;
+    box-shadow: inset 1px 0 0 0 #e5e5e5;
+  }
+
   .user-navigation__item--search {
-    border-right: 1px solid #ECECEC;
-    border-left: 1px solid #ECECEC;
-    position: relative;
-    width: 83px;
-    min-height: 88px;
-    margin-right: 85px;
+    padding-top: 31px;
+    padding-right: 33px;
+    padding-bottom: 34px;
+    padding-left: 33px;
+    box-shadow: inset 1px 0 0 0 #e5e5e5;
   }
 
-  .user-navigation__link {
-    display: inline-block;
-    vertical-align: top;
-    text-align: center;
-  }
-
-  span {
-    position: absolute;
-    opacity: 0;
-  }
-
-  .user-navigation__svg {
-    position: absolute;
-    top: 36px;
-    right: 39%;
+  .user-navigation__basket-svg {
+    padding-right: 33px;
   }
 }
 
+
 @media (min-width: @desktop-width) {
   .user-navigation {
-    display: flex;
-    /* outline: 3px solid rgba(150, 75, 0, 0.8);
-    outline-offset: -5px; */
-
-    margin: 0;
-    padding: 0;
+    justify-content: space-between;
+    grid-column-start: 3;
+    grid-row-start: 1;
   }
 
-  .user-navigation__link {
-    padding: 0;
+  .user-navigation__basket-svg {
+    padding-right: 30px;
   }
 
-  .user-navigation__item--search {
-    margin-right: 81px;
+  .user-navigation__item--basket {
+    padding-left: 28px;
   }
+
 }
