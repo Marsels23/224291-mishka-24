@@ -45,19 +45,36 @@
   }
 
   .order-contact__item {
-    display: flex;
-
+    display: grid;
+    grid-template-columns: 58px 500px;
+    column-gap: 109px;
+    grid-template-rows: min-content min-content;
   }
 
   .order-contact__title {
     margin: 0;
-    align-items: center;
     min-width: 80px;
-    margin-right: 124px;
   }
 
   .order-contact__input {
     width: 500px;
     background-color: #f1f1f1;
   }
+}
+
+@media (min-width: @desktop-width) {
+  .order-contact__item {
+    grid-template-columns: 120px 700px;
+    column-gap: 55px;
+  }
+
+  .order-contact__title {
+    grid-column-start: 1;
+    justify-self: end;
+    min-width: 0;
+  }
+
+   .order-contact__input {
+    min-width: 700px;
+   }
 }

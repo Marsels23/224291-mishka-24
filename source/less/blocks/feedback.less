@@ -53,6 +53,15 @@
   margin-bottom: 45px;
   text-decoration: none;
   color: #444444;
+
+  &:hover {
+    color: #ffffff;
+    background-color: #444444;
+  }
+
+  &:active {
+    color: rgba(225,225,225,.3);
+  }
 }
 
 .feedback__btn-slide {
@@ -69,26 +78,48 @@
   width: 50px;
   height: 26px;
   background: transparent;
+  cursor: pointer;
 }
 
 .feedback__btn--left {
   position: absolute;
-  background-image: url(../img/icon-left-arrow.svg);
-  background-repeat: no-repeat;
-  left: 20%;
+  left: 10%;
+
+  &:hover {
+    .feedback__btn--svg {
+      fill: rgba(0, 0, 0, .6)
+    }
+  }
+
+  &:active {
+    .feedback__btn--svg {
+      fill: rgba(0, 0, 0, .3)
+    }
+  }
 }
 
 .feedback__btn--right {
   position: absolute;
-  background-image: url(../img/icon-left-arrow.svg);
-  background-repeat: no-repeat;
-  right: 20%;
+  right: 50%;
   transform: rotate(180deg);
+
+  &:hover {
+    .feedback__btn--svg {
+      fill: rgba(0, 0, 0, .6)
+    }
+  }
+
+  &:active {
+    .feedback__btn--svg {
+      fill: rgba(0, 0, 0, .3)
+    }
+  }
 }
 
 @media (min-width: @tablet-width) {
   .feedback {
-    margin-bottom: 121px;
+    margin-bottom: 68px;
+    padding-top: 82px;
     background-image: url(../img/review@1x.jpg);
     background-repeat: no-repeat;
     background-size: 350px 457px;
@@ -161,7 +192,8 @@
   }
 
   .feedback__btn--right {
-    right: 22px;
+    left: 50%;
+    bottom: 11px;
   }
 
   .feedback__text {
@@ -220,3 +252,8 @@
 }
 }
 
+@media (min-width: @desktop-width) {
+  .feedback {
+    padding-top: 0;
+  }
+}
