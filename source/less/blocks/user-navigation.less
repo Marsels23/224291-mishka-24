@@ -18,12 +18,30 @@
 .user-navigation__link {
   text-decoration: none;
   color: black;
+
+  &:hover {
+    color: rgba(0, 0, 0, .6);
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, .3);
+  }
 }
 
-.user-navigation__svg,
-.user-navigation__basket-svg {
-  padding-right: 25px;
+.user-navigation__basket-svg,
+.user-navigation__svg {
+  fill: #d3d2d2;
+
+  &:hover {
+    fill: #63D1BB;
+  }
+
+  &:active {
+    fill: rgba(99, 209, 187, 0.3)
+
+  }
 }
+
 
 @media (min-width: @tablet-width) {
   .user-navigation {
@@ -84,7 +102,7 @@
   }
 
   .user-navigation__item--basket {
-    padding-left: 28px;
+    padding-left: 20px;
   }
 
 }

@@ -58,19 +58,22 @@
 
 @media (min-width: @desktop-width) {
   .order-details {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: 120px 700px;
+    column-gap: 55px;
     grid-template-rows: min-content min-content;
     row-gap: 49px;
   }
 
   .order-details__title {
-    display: flex;
-    justify-content: center;
+    grid-column-start: 1;
+    justify-self: end;
+    margin-right: 0;
   }
 
   .order-details__hint {
-    grid-column-start: 4;
+    grid-column-start: 2;
     grid-column-end: -1;
+    justify-self: end;
   }
 }
 
