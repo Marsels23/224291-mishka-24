@@ -76,6 +76,9 @@
   display: block;
 }
 
+.header-nav__delivery {
+  display: none;
+}
 
 @media (min-width: @tablet-width) {
   .header-nav__button {
@@ -116,6 +119,16 @@
     width: 100%;
     margin: 0 auto;
   }
+
+  .header-nav__delivery {
+    display: block;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 400;
+    margin: 0;
+   margin-left: auto;
+   padding-top: 17px;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -135,5 +148,10 @@
     display: grid;
     grid-template-columns: 384px 318px 348px;
     grid-template-rows: 1fr 1fr;
+  }
+
+  .header-nav__delivery {
+    grid-row-start: 2;
+    grid-column-start: 3;
   }
 }
