@@ -173,7 +173,7 @@
 
   .feedback__button {
     order: -1;
-    width: 175px;
+    max-width: 170px;
     margin-bottom: 39px;
   }
 
@@ -252,7 +252,7 @@
       height: 23px;
       width: 100%;
       transform: rotate(180deg);
-      bottom: -67px;
+      bottom: -90px;
       left: 0;
     }
   }
@@ -270,5 +270,24 @@
 @media (min-width: @desktop-width) {
   .feedback {
     padding-top: 0;
+    margin-bottom: 145px;
+  }
+
+  .feedback__text {
+    max-width: 805px;
+    margin-bottom: 44px;
+  }
+
+  .feedback__inner {
+    padding-top: 78px;
+    padding-bottom: 65px;
+  }
+
+  .feedback__author {
+    font-size: 17px;
+  }
+
+  .feedback__btn-slide {
+    bottom: 96px;
   }
 }

@@ -231,6 +231,10 @@ margin-bottom: 37px;
 }
 
 @media (min-width: @desktop-width) {
+.featured {
+  margin-bottom: 162px;
+}
+
   .featured::after {
     display: none;
   }
@@ -238,15 +242,16 @@ margin-bottom: 37px;
   .featured__inner {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: min-content min-content min-content;
-    column-gap: 57px;
+ column-gap: 0;
     margin-bottom: 67px;
     position: relative;
+    padding-top: 20px;
 
     &::after {
       content: "";
       display: block;
       position: absolute;
-      bottom: -73px;
+      bottom: -91px;
       background-image: url(../img/bg-zigzag-line.svg);
       height: 23px;
       width: 100%;
@@ -265,14 +270,14 @@ margin-bottom: 37px;
     position: relative;
     z-index: 2;
     margin: 0;
-    padding-top: 71px;
+    padding-top: 60px;
   }
 
   .featured__name {
     grid-column-start: 1;
     grid-row-start: 1;
     margin: 0;
-    padding-top: 71px;
+    padding-top: 68px;
   }
 
   .featured__content-text {
@@ -280,13 +285,14 @@ margin-bottom: 37px;
     grid-column-end: 4;
     grid-row-start: 2;
     margin: 0;
-    padding-top: 44px;
+    padding-top: 36px;
+    margin-bottom: 88px;
   }
 
   .featured__description {
     font-size: 17px;
     line-height: 30px;
-    margin-bottom: 60px;
+    margin-bottom: 52px;
   }
 
   .featured__parameters {
@@ -298,23 +304,31 @@ margin-bottom: 37px;
     grid-column-end: -1;
     grid-row-start: 1;
     grid-row-end: -1;
+    margin-top: 0;
+    min-height: 636px;
   }
 
   .featured__wrapper {
     grid-column-start: 2;
     grid-column-end: 4;
     grid-row-start: 3;
+    display: flex;
+    flex-direction: column;
   }
 
   .featured__cost {
     font-size: 20px;
     line-height: 24px;
-    margin-bottom: 33px;
+    margin: 0;
+   padding-left: 69px;
+   margin-bottom: 33px;
   }
 
   .featured__button {
     font-size: 17px;
     line-height: 20px;
     text-transform: uppercase;
+    max-width: 292px;
+
   }
 }
