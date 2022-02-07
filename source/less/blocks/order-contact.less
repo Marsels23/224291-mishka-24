@@ -27,8 +27,20 @@
 }
 
 .order-contact__title {
-  margin-bottom: 9px;
+  margin-bottom: 3px;
   white-space: nowrap;
+}
+
+.order-contact__item {
+  margin-bottom: 13px;
+}
+
+.order-contact__item--email {
+  margin-bottom: 0px
+}
+
+.order-contact__input--email {
+  margin-bottom: 0;
 }
 
 @media (min-width: @tablet-width) {
@@ -40,8 +52,8 @@
   }
 
   .order-contact__inner {
-    padding-top: 50px;
-    margin-bottom: 30px;
+    padding-top: 66px;
+    margin-bottom: 50px;
   }
 
   .order-contact__item {
@@ -49,6 +61,7 @@
     grid-template-columns: 58px 500px;
     column-gap: 109px;
     grid-template-rows: min-content min-content;
+    margin-bottom: 4px;
   }
 
   .order-contact__title {
@@ -56,9 +69,14 @@
     min-width: 80px;
   }
 
+  .order-contact__item--email {
+    margin-bottom: 51px;
+  }
+
   .order-contact__input {
     width: 500px;
     background-color: #f1f1f1;
+    padding-bottom: 8px;
   }
 }
 

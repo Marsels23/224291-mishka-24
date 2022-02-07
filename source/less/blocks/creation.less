@@ -18,6 +18,7 @@
 
 .creation__icon {
   padding-right: 25px;
+  fill: #63D1BB;
 }
 
 .creation__caption {
@@ -55,8 +56,8 @@
   color: #444444;
   padding-bottom: 16px;
   padding-top: 16px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
   margin-bottom: 33px;
   margin-left: 34px;
   margin-right: 34px;
@@ -64,38 +65,71 @@
 
 .creation__media {
   position: relative;
+  max-height: 185px;
 }
+
 
 .creation__play {
   position: absolute;
-  left: 37%;
-  top: 30%;
+  left: 30%;
+  top: 20%;
 }
 
 @media (min-width: @tablet-width) {
+ .creation {
+   margin-bottom: 63px;
+ }
+
   .creation__header {
     order: 1;
+    padding-top: 41px;
+    padding-left: 39px;
+    margin-bottom: 15px;
   }
 
   .creation__media {
     order: 0;
+    max-height: 455px;
   }
 
   .creation__copy {
     order: 2;
     font-size: 15px;
+    line-height: 30px;
+    max-width: 580px;
+    padding-left: 37px;
   }
 
   .creation__btn {
     order: 3;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 580px;
+    margin-left: 39px;
+    margin-bottom: 44px;
   }
 
   .creation__caption {
     font-size: 20px;
   }
+
+  .creation__play {
+    left: 42%;
+    top: 42%
+  }
+
+  .creation__icon {
+    width: 44px;
+    height: 33px;
+    padding-right: 20px;
+  }
 }
 
 @media (min-width: @desktop-width) {
+  .creation {
+    margin-bottom: 103px;
+  }
+
   .creation__content {
     display: grid;
     grid-template-columns: 683px 290px;
@@ -125,6 +159,10 @@
     margin-bottom: 51px;
   }
 
+  .creation__caption {
+max-width: 179px;
+  }
+
   .creation__btn {
     grid-column-start: 2;
     grid-column-end: 3;
@@ -135,10 +173,11 @@
     padding-top: 47px;
     display: flex;
     flex-direction: column;
+    margin-bottom: 27px;
   }
 
   .creation__icon {
-    margin-bottom: 27px;
+    margin-bottom: 18px;
   }
 
   .creation__btn {
@@ -147,6 +186,6 @@
     padding-bottom: 16px;
     padding-top: 16px;
     margin-right: 36px;
+    max-width: 230px;
   }
 }
-

@@ -1,6 +1,6 @@
 .feedback {
   position: relative;
-  margin-bottom: 38px;
+  margin-bottom: 42px;
 
   &::after {
     content: "";
@@ -24,17 +24,21 @@
   font-size: 15px;
   line-height: 30px;
   margin: 0;
+  margin-bottom: 35px;
 }
 
 .feedback__author {
   font-weight: bold;
   font-size: 17px;
   line-height: 24px;
+  margin: 0;
   margin-bottom: 33px;
 }
 
 .feedback__user {
+  display: block;
   font-weight: normal;
+  padding-top: 5px;
 }
 
 .feedback__button {
@@ -49,10 +53,11 @@
   text-align: center;
   border: 2px solid #444444;
   padding-top: 16px;
-  padding-bottom: 16px;
+  padding-bottom: 13px;
   margin-bottom: 45px;
   text-decoration: none;
   color: #444444;
+  text-transform: uppercase;
 
   &:hover {
     color: #ffffff;
@@ -68,7 +73,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  margin-bottom: 38px;
+  margin-bottom: 36px;
   border: 1px solid #ECECEC;
   min-height: 52px;
 }
@@ -83,16 +88,16 @@
 
 .feedback__btn--left {
   position: absolute;
-  left: 10%;
+  left: 13%;
 
   &:hover {
-    .feedback__btn--svg {
+    .feedback__btn-svg {
       fill: rgba(0, 0, 0, .6)
     }
   }
 
   &:active {
-    .feedback__btn--svg {
+    .feedback__btn-svg {
       fill: rgba(0, 0, 0, .3)
     }
   }
@@ -100,17 +105,17 @@
 
 .feedback__btn--right {
   position: absolute;
-  right: 50%;
+  right: 13%;
   transform: rotate(180deg);
 
   &:hover {
-    .feedback__btn--svg {
+    .feedback__btn-svg {
       fill: rgba(0, 0, 0, .6)
     }
   }
 
   &:active {
-    .feedback__btn--svg {
+    .feedback__btn-svg {
       fill: rgba(0, 0, 0, .3)
     }
   }
@@ -119,7 +124,8 @@
 @media (min-width: @tablet-width) {
   .feedback {
     margin-bottom: 68px;
-    padding-top: 82px;
+    padding-top: 80px;
+    padding-bottom: 18px;
     background-image: url(../img/review@1x.jpg);
     background-repeat: no-repeat;
     background-size: 350px 457px;
@@ -134,7 +140,7 @@
       content: "";
       display: block;
       position: absolute;
-      bottom: -121px;
+      bottom: -90px;
       background-image: url(../img/bg-zigzag-line.svg);
       height: 17px;
       width: 100%;
@@ -144,11 +150,16 @@
     }
   }
 
+  .feedback br {
+    display: none;
+  }
+
   .feedback__inner {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     position: relative;
+    align-items:flex-start;
   }
 
   .feedback__caption {
@@ -157,21 +168,24 @@
     order: -2;
     margin: 0;
     margin-right: 284px;
+
   }
 
   .feedback__button {
     order: -1;
-    width: 175px;
+    max-width: 170px;
+    margin-bottom: 39px;
   }
 
   .feedback__btn-slide {
     width: 175px;
     border: none;
     position: absolute;
-    bottom: 7px;
-    right: 80px;
+    bottom: 28px;
+    right: 45px;
     margin: 0;
   }
+
 
   .feedback__btn {
     width: 137px;
@@ -192,8 +206,8 @@
   }
 
   .feedback__btn--right {
-    left: 50%;
-    bottom: 11px;
+    left: 61%;
+    bottom: 12px;
   }
 
   .feedback__text {
@@ -203,6 +217,7 @@
 
   .feedback__slider {
     position: relative;
+
   }
 }
 
@@ -237,7 +252,7 @@
       height: 23px;
       width: 100%;
       transform: rotate(180deg);
-      bottom: -67px;
+      bottom: -90px;
       left: 0;
     }
   }
@@ -255,5 +270,24 @@
 @media (min-width: @desktop-width) {
   .feedback {
     padding-top: 0;
+    margin-bottom: 145px;
+  }
+
+  .feedback__text {
+    max-width: 805px;
+    margin-bottom: 44px;
+  }
+
+  .feedback__inner {
+    padding-top: 78px;
+    padding-bottom: 65px;
+  }
+
+  .feedback__author {
+    font-size: 17px;
+  }
+
+  .feedback__btn-slide {
+    bottom: 96px;
   }
 }

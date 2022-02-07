@@ -2,7 +2,7 @@
   border: none;
   padding: 0;
   margin: 0;
-  margin-bottom: 32px;
+  margin-bottom: 12px;
 }
 
 .order-name__title {
@@ -33,14 +33,14 @@
 
 .order-name__input {
   width:  100%;
-  padding-top: 14px;
+  padding-top: 17px;
   padding-left: 0;
   padding-right: 35px;
-  padding-bottom: 18px;
+  padding-bottom: 14px;
   border: 0;
   border-bottom: 2px solid #000;
   margin: 0;
-  margin-bottom: 22px;
+  margin-bottom: 6px;
   font-size: 17px;
   line-height: 18px;
   box-sizing: border-box;
@@ -54,7 +54,7 @@
 
   .order-name__inner {
     display: flex;
-
+margin-bottom: 9px;
   }
 
   .order-name__input {
@@ -62,19 +62,28 @@
     margin-top: -4px;
     padding-top: 0;
     padding-left: 16px;
-    padding-right: 35px;
+    padding-right: 120px;
     padding-bottom: 15px;
   }
 
   .order-name__item {
     display: flex;
     align-items: flex-start;
-    margin-bottom: 39px;
+    margin-bottom: 35px;
   }
 
   .order-name__lable {
 padding: 0;
 margin-right: 25px;
+font-size: 19px;
+  }
+
+  .order-name__input::-webkit-input-placeholder {
+    font-size: 19px;
   }
 }
-
+@media (min-width: @desktop-width) {
+.order-name__input {
+  padding-right: 320px
+}
+}
